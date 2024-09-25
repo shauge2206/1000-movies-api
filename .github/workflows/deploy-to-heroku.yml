@@ -20,9 +20,11 @@ jobs:
       # Step 2: Fetch the latest changes from Heroku
       - name: Fetch Heroku main branch
         run: |
-          git remote add heroku https://git.heroku.com/java-movies-api.git
+          git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/java-movies-api.git
           git fetch heroku main
-          git merge heroku/main
+          git merge FETCH_HEAD
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
 
       # Step 3: Push to Heroku using API key for authentication
       - name: Deploy to Heroku
