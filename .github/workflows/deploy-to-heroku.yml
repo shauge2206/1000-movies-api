@@ -23,5 +23,6 @@ jobs:
 
       # Step 3: Deploy to Heroku
       - name: Deploy to Heroku
-        run:
+        run: |
+          git remote add heroku https://git.heroku.com/java-movies-api.git
           git push heroku main
