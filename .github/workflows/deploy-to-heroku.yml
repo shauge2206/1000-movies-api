@@ -22,7 +22,7 @@ jobs:
         run: |
           git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/java-movies-api.git
           git fetch heroku main
-          git merge FETCH_HEAD
+          git merge heroku/main
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
 
