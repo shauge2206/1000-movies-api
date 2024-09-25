@@ -1,5 +1,2 @@
-This is a README.
-Readme feedme
-
-testing this some more
+This is a README. More coming soon.
 
