@@ -17,10 +17,19 @@ jobs:
         with:
           ref: main  # Ensure we are checking out the 'main' branch
 
-      # Step 2: Push to Heroku using API key for authentication
-      - name: Deploy to Heroku
+      # Step 2: Add Heroku remote
+      - name: Add Heroku remote
         run: |
-          git remote add heroku https://git.heroku.com/java-movies-api.git
-          git push https://heroku:$HEROKU_API_KEY@git.heroku.com/java-movies-api.git main
+          git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/java-movies-api.git
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+      # Step 3: Pull the latest changes from Heroku
+      - name: Pull the latest changes from Heroku
+        run: |
+          git pull heroku main
+
+      # Step 4: Push to Heroku
+      - name: Deploy to Heroku
+        run: |
+          git push heroku main
