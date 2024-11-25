@@ -15,20 +15,20 @@ public class Movie {
   private Long movieId;
 
   private String title;
-  private int releasedYear;
+  private Integer releasedYear;
   private String certificate;
-  private String runtime;
+  private Integer runtime;
   private String genre;
-  private float imdbRating;
+  private Float imdbRating;
   private String overview;
-  private float metaScore;
+  private Float metaScore;
   private String director;
   private String actor1;
   private String actor2;
   private String actor3;
   private String actor4;
-  private int numberOfVotes;
-  private int grossIncome;
+  private Integer numberOfVotes;
+  private Integer grossIncome;
   private String posterLink;
 
 
@@ -36,9 +36,10 @@ public class Movie {
   }
 
 
-  public Movie(String title, int releasedYear, String certificate, String runtime, String genre,
-      float imdbRating, String overview, int metaScore, String director, String actor1,
-      String actor2, String actor3, String actor4, int numberOfVotes, int grossIncome,
+  public Movie(String title, Integer releasedYear, String certificate, Integer runtime,
+      String genre,
+      Float imdbRating, String overview, Float metaScore, String director, String actor1,
+      String actor2, String actor3, String actor4, Integer numberOfVotes, Integer grossIncome,
       String posterLink) {
     this.title = title;
     this.releasedYear = releasedYear;
@@ -70,7 +71,7 @@ public class Movie {
     return certificate;
   }
 
-  public String getRuntime() {
+  public Integer getRuntime() {
     return runtime;
   }
 

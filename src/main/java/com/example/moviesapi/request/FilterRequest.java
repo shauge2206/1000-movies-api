@@ -3,7 +3,6 @@ package com.example.moviesapi.request;
 public class FilterRequest {
 
   private String genre;
-  private int grossIncome;
   private int releasedYear;
   private String runtime;
   private float imdbRating;
@@ -12,16 +11,24 @@ public class FilterRequest {
     return imdbRating;
   }
 
+  public void setImdbRating(float imdbRating) {
+    this.imdbRating = imdbRating;
+  }
+
   public String getRuntime() {
     return runtime;
+  }
+
+  public void setRuntime(String runtime) {
+    this.runtime = runtime;
   }
 
   public int getReleasedYear() {
     return releasedYear;
   }
 
-  public int getGrossIncome() {
-    return grossIncome;
+  public void setReleasedYear(int releasedYear) {
+    this.releasedYear = releasedYear;
   }
 
   public String getGenre() {
@@ -30,22 +37,6 @@ public class FilterRequest {
 
   public void setGenre(String genre) {
     this.genre = genre;
-  }
-
-  public void setGrossIncome(int grossIncome) {
-    this.grossIncome = grossIncome;
-  }
-
-  public void setReleasedYear(int releasedYear) {
-    this.releasedYear = releasedYear;
-  }
-
-  public void setRuntime(String runtime) {
-    this.runtime = runtime;
-  }
-
-  public void setImdbRating(float imdbRating) {
-    this.imdbRating = imdbRating;
   }
 }
 
