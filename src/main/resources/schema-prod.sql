@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS movie (
     poster_link VARCHAR(300),
     title VARCHAR(100),
     released_year INTEGER,
-    certificate CHAR(10),
+    certificate VARCHAR(10),
     runtime VARCHAR(20),
     genre VARCHAR(100),
     imdb_rating REAL,
